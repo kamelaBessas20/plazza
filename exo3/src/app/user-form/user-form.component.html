@@ -1,0 +1,85 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>
+        Nom: 
+        <input type="text" formControlName="nom">
+    </label>
+    <label>
+        Prénom: 
+        <input type="text" formControlName="prenom">
+    </label>
+    <label>
+        Age: 
+        <input type="text" formControlName="age">
+    </label>
+    <div formGroupName="adresse">
+        <h1>Adresse</h1>
+        <label>
+            Rue:
+            <input type="text" formControlName="rue">
+        </label>
+        <label>
+            Numéro:
+            <input type="text" formControlName="numero">
+        </label>
+        <label>
+            Ville:
+            <input type="text" formControlName="ville">
+        </label>
+    </div>
+    <div formArrayName="catsList">
+        <div *ngFor="let cat of catsList.controls; let i=index">
+            <label>
+                Chat {{ i+1 }} :
+                <input type="text" [formControlName] ="i">
+            </label>
+        </div>
+        <button type="button" (click)="ajouterUnChat()">Ajouter un Chat</button>
+    </div>
+    <div formArrayName="users">
+        <div *ngFor="let user of users; let i=index">
+            <label>
+                User {{ i+1 }} :
+                <input type="text" [formControlName] ="i">
+            </label>
+        </div>
+        <button type="button" (click)="ajouterUnUser()">Ajouter un User</button>
+    </div>
+    <button type="submit">Envoyer</button>
+</form>
+<div>
+    <h1>Users</h1>
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Age</th>
+            <th>Rue</th>
+            <th>Numéro</th>
+            <th>Ville</th>
+            <th>Chats</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>
+                {{user.nom}}
+            </td>
+            <td>
+                {{user.prenom}}
+            </td>
+            <td>
+                {{user.age}}
+            </td>
+            <td>
+                {{user.rue}}
+            </td>
+            <td>
+                {{user.numero}}
+            </td>
+            <td>
+                {{user.ville}}
+            </td>
+            <td *ngFor="let cat of cats; let i=index"> 
+                {{ users.cat[i]}}
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,25 +1,25 @@
 {
-    "cats": [
-      {
-        "id": 1,
-        "name": "Rambo",
-        "age": "2",
-        "race": "Abyssin",
-        "isAlive": "true"
-      },
-      {
-        "id": 2,
-        "name": "Richie",
-        "age": "3",
-        "race": "Balinais",
-        "isAlive": "false"
-      },
-      {
-        "id": 3,
-        "name": "Rocket",
-        "age": "2",
-        "race": "Bengal",
-        "isAlive": "true"
-      }
-    ]
-  }
+  "cats": [
+    {
+      "id": 1,
+      "name": "Rambo",
+      "age": "2",
+      "race": "Abyssin",
+      "isAlive": "true"
+    },
+    {
+      "id": 2,
+      "name": "Richie",
+      "age": "3",
+      "race": "Balinais",
+      "isAlive": "false"
+    },
+    {
+      "id": 3,
+      "name": "Rocket",
+      "age": "2",
+      "race": "Bengal",
+      "isAlive": "true"
+    }
+  ]
+}

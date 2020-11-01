@@ -1,1 +1,26 @@
-<p>cat works!</p>
+<table mat-table [dataSource]="cats" class="mat-elevation-z8">
+  
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Nom">
+      <th mat-header-cell *matHeaderCellDef> Nom: </th>
+      <td mat-cell *matCellDef="let cat"> {{cats.age}} </td>
+    </ng-container>
+  
+    <!-- Race Column -->
+    <ng-container matColumnDef="Race">
+      <th mat-header-cell *matHeaderCellDef> Race: </th>
+      <td mat-cell *matCellDef="let cat"> {{cat.race}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Vivant">
+      <th mat-header-cell *matHeaderCellDef> Vivant </th>
+      <td mat-cell *matCellDef="let cat"> {{cat.isAlive}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  

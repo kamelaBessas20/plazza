@@ -1,1 +1,22 @@
+      <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()"> 
+        <mat-form-field class="example-full-width">
+          <mat-label>Nom</mat-label>
+          <input matInput  formControlName="name">
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Age</mat-label>
+          <input matInput  formControlName="age">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Race</mat-label>
+          <input matInput   formControlName="race">
+        </mat-form-field>
+        <section class="example-section">
+          <mat-label>Le chat est il vivant ?</mat-label>
+          <mat-checkbox class="example-margin">Oui</mat-checkbox>
+          <mat-checkbox class="example-margin" >Non</mat-checkbox>
+        </section>
+        <button type="submit" class="btn">Ajouter un chat</button>
+      </form>
 

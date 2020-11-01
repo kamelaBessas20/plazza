@@ -9,13 +9,13 @@ import { Cat } from 'src/app/models/Cat';
 })
 export class CatComponent implements OnInit {
   cats: Cat[]= [];
+  displayedColumns: string[] = ['nom', 'age', 'race', 'isAlive']
   constructor(private catService: CatService) { 
     this.catService.findAll().subscribe(data => {
       this.cats = data;
-      console.log(this.cats);
+      return this.cats
     })
   }
-
   ngOnInit(): void {
   }
 

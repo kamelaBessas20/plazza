@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { CatService } from 'src/app/services/cat.service';
 import { Router } from '@angular/router';
@@ -28,7 +27,6 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(){
-    
     this.catService.create(this.form.value).subscribe(()=>{
       this.router.navigate(['/cat'])
     });
